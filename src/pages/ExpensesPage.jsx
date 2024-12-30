@@ -1,16 +1,12 @@
-// rrd imports
 import { useLoaderData } from "react-router-dom";
 
-// library import
 import { toast } from "react-toastify";
 
-// component imports
 import Table from "../components/Table";
 
-// helpers
+
 import { deleteItem, fetchData } from "../helpers";
 
-// loader
 export async function expensesLoader() {
   const expenses = fetchData("expenses");
   return { expenses };
